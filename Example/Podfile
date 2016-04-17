@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'JVNLogger_Example', :exclusive => true do
+  pod 'JVNLogger', :path => '../'
+end
+
+target 'JVNLogger_Tests', :exclusive => true do
+  pod 'JVNLogger', :path => '../'
+
+  pod 'FBSnapshotTestCase'
+end
