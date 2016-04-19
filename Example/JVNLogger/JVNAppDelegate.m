@@ -7,12 +7,17 @@
 //
 
 #import "JVNAppDelegate.h"
+#import <JVNLogger/JVNLogger.h>
+#import <XCDLumberjackNSLogger/XCDLumberjackNSLogger.h>
 
 @implementation JVNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDLog addLogger:[XCDLumberjackNSLogger new]];
+    JVNLogInfo(@"hello JVNLogger");
     return YES;
 }
 

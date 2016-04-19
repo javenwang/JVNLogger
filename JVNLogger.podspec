@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "JVNLogger"
   s.version          = "0.1.0"
-  s.summary          = "A short description of JVNLogger."
+  s.summary          = "A logger uses CocoaLumberjack with runtime dependency."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,22 +17,21 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "This Logger can use CocoaLumberjack if it exists and fallback to NSLog."
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/JVNLogger"
+  s.homepage         = "https://github.com/javenwang/JVNLogger"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Javen Wang" => "jiaxwang@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/JVNLogger.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/javenwang/JVNLogger.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'JVNLogger/Classes/**/*'
-  s.resource_bundles = {
-    'JVNLogger' => ['JVNLogger/Assets/*.png']
-  }
+#  s.resource_bundles = {
+#    'JVNLogger' => ['JVNLogger/Assets/*.png']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

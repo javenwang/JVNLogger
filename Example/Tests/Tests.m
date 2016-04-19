@@ -6,6 +6,7 @@
 //  Copyright (c) 2016 Javen Wang. All rights reserved.
 //
 
+#import <JVNLogger/JVNLogger.h>
 @import XCTest;
 
 @interface Tests : XCTestCase
@@ -26,9 +27,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testLog
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    JVNLogError(@"error");
+    JVNLogWarn(@"warn");
+    JVNLogInfo(@"hello info %@", NSStringFromClass([JVNLogger class]));
+    JVNLogDebug(@"debug");
 }
 
 @end

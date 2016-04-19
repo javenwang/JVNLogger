@@ -1,12 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
+platform :ios, '7.0'
+#use_frameworks!
 
-target 'JVNLogger_Example', :exclusive => true do
+target 'JVNLogger_Example' do
   pod 'JVNLogger', :path => '../'
+#  pod 'CocoaLumberjack', '~> 2.2.0'
+  pod 'XCDLumberjackNSLogger', '~> 1.0.2'
 end
 
-target 'JVNLogger_Tests', :exclusive => true do
-  pod 'JVNLogger', :path => '../'
-
-  pod 'FBSnapshotTestCase'
+target 'JVNLogger_Tests' do
+  pod 'Kiwi', '~> 2.4.0'
 end
